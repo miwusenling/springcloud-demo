@@ -1,0 +1,17 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: consumer-helloService-byRibbon
+
+
+eureka:
+  client:
+    serviceUrl:
+      #defaultZone: http://localhost:8080/eureka/
+      defaultZone: http://172.17.0.2:8080/eureka/
+      
+  instance:
+    instance-id: http://172.17.0.5:${server.port}
+    prefer-ip-address: true
+    ip-address: 172.17.0.5

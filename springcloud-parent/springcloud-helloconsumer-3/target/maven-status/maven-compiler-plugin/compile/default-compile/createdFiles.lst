@@ -1,0 +1,4 @@
+com\springcloud\consumer\feign\HelloService.class
+com\springcloud\consumer\feign\HelloServiceHystrix.class
+com\springcloud\consumer\feign\HelloControler.class
+com\springcloud\consumer\feign\ServiceFeignApplication.class

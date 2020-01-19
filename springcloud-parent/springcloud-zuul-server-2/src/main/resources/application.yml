@@ -1,0 +1,23 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://172.17.0.2:8080/eureka/
+      
+  instance:
+    instance-id: http://172.17.0.10:${server.port}
+    prefer-ip-address: true
+    ip-address: 172.17.0.10
+      
+server:
+  port: 8088
+spring:
+  application:
+    name: service-zuul
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: consumer-helloService-byRibbon
+    api-b:
+      path: /api-b/**
+      serviceId: consumer-helloService-byFeign

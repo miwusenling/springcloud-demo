@@ -1,0 +1,3 @@
+com\springcloud\consumer\ribbon\HelloControler.class
+com\springcloud\consumer\ribbon\HelloService.class
+com\springcloud\consumer\ribbon\ConsumerRibbonApplication.class

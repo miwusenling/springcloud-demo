@@ -1,0 +1,15 @@
+#在docker环境下手动制作镜像
+#FROM java:8-jre
+FROM java:8
+MAINTAINER lzhw <f-16cd@163.com>
+
+# jar文件和dockerfile文件在同一个目录(指定源jar路径会出错)
+ADD SpringCloud-Eureka.jar /software/dockerImage/SpringCloud-Eureka.jar
+#VOLUME /software/code/SpringCloud-Eureka.jar /software/dockerImage/SpringCloud-Eureka.jar
+
+EXPOSE 8080
+
+#CMD ["java", "-jar", "/software/dockerImage/SpringCloud-Eureka.jar"]
+ENTRYPOINT ["java", "-jar", "/software/dockerImage/SpringCloud-Eureka.jar"]
+
+#手动制作镜像结束

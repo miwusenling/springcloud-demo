@@ -1,0 +1,15 @@
+#在docker环境下手动制作镜像
+#FROM java:8-jre
+FROM java:8
+MAINTAINER lzhw <f-16cd@163.com>
+
+# jar文件和dockerfile文件在同一个目录(指定源jar路径会出错)
+ADD SpringCloud-HelloConsumer-1.jar /software/dockerImage/SpringCloud-HelloConsumer-1.jar
+#VOLUME /software/code/SpringCloud-Eureka.jar /software/dockerImage/SpringCloud-HelloService-1.jar
+
+EXPOSE 8083
+
+#CMD ["java", "-jar", "/software/dockerImage/SpringCloud-HelloService-1.jar"]
+ENTRYPOINT ["java", "-jar", "/software/dockerImage/SpringCloud-HelloConsumer-1.jar"]
+
+#手动制作镜像结束
