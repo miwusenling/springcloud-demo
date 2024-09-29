@@ -22,6 +22,13 @@ public class EurekaApplication {
 		int c = a / b;
 		System.out.println(c);
 	}
+
+	public static void test_3(){
+		int a = 10;
+		int b = 0;
+		int c = a / b;
+		System.out.println(c);
+	}
 	
 	public static void main(String[] args) {
 		SpringApplication.run(EurekaApplication.class, args);
